@@ -25,11 +25,11 @@ report = []
 a = text.split('\n')
 print(a)
 
-for wq in a:
+for i in a:
     
     p = re.compile(reg)
-    place = p.search(wq).group(1)
-    time = p.search(wq).group(2)
+    place = p.search(i).group(1)
+    time = p.search(i).group(2)
 
     time_dt = datetime.strptime(time,'%B %d, %Y')
     time_output = datetime.strftime(time_dt,'%Y/%m/%d')
